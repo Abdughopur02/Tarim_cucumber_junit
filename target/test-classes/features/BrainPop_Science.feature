@@ -15,7 +15,7 @@ Agile Story: As a user, I should be able to access all the features
   And user click on Forces of Nature
   Then user should able to see 19 topics on Forces of Nature page
   Then user able to click on the topic Tornadoes
-  And user should able to see Tornadoes-BrainPOP as title
+  And user should able to see "Tornadoes-BrainPOP" as title
   Then user should able to click on movie image icon
   Then user should able to click on play button
   And user perform various action with the movie player

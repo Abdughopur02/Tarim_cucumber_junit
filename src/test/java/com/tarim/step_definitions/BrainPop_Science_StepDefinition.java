@@ -12,6 +12,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
@@ -85,21 +86,34 @@ Assert.assertTrue(unit_containers.size()==int1);
         System.out.println(expectedTitle);
 
 
+
+
+
+
     }
 
 
 
     @Then("user should able to click on movie image icon")
     public void user_should_able_to_click_on_movie_image_icon() {
-     loginPage.movie_manue.click();
+     Actions actions=new Actions(Driver.getDriver());
+     actions.moveToElement(loginPage.movie_manue).click().perform();
 
     }
     @Then("user should able to click on play button")
     public void user_should_able_to_click_on_play_button() {
+        loginPage.play.click();
 
     }
     @Then("user perform various action with the movie player")
     public void user_perform_various_action_with_the_movie_player() {
+
+        //Actions actions=new Actions(Driver.getDriver());
+        // actions.dragAndDrop(loginPage.videoSlider01,loginPage.videoSlider ).perform();
+        WebElement videoSlider=Driver.getDriver().findElement(By.xpath("/html/body/div[1]/div/div/div/div/div/div/div/div/main/div[2]/div/div/div/div/div/div[1]/div/div/div/div[2]/div[1]/div/div/input"));
+        for (int i = 1; i <=36 ; i++) {
+            videoSlider.sendKeys(Keys.ARROW_RIGHT);
+        }
 
     }
     @When("user click on quiz after video")

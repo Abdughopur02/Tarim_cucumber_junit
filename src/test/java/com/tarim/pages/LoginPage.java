@@ -2,6 +2,7 @@ package com.tarim.pages;
 
 import com.tarim.utilities.Driver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -68,6 +69,10 @@ public class LoginPage {
         this.userName.sendKeys(username);
         this.passWord.sendKeys(password);
         this.logInButton.click();
+    }
+    public void action(){
+        Actions actions=new Actions(Driver.getDriver());
+
     }
 
 }

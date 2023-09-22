@@ -55,6 +55,8 @@ public class LoginPage {
     public WebElement videoSlider01;
     @FindBy(xpath = "//div[1]/div/div/div/div/div/div/div/div/main/div[2]/div/div/div/div/div/div[1]/div/div/div/div[2]/div[1]/time[2]")
     public WebElement videoSlider;
+    @FindBy(xpath = "(//ul[@class=\"features_list\"]//li)[2]")
+    public WebElement quize_feature;
     @FindBy(xpath = "//span[.=\"Closed Captions\"]")
     public WebElement closedCaption;
     //div[1]/div/div/div/div/div/div/div/div/main/div[3]/ul/li[7]/a

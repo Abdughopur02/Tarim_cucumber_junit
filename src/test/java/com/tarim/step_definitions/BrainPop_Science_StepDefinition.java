@@ -118,10 +118,13 @@ Assert.assertTrue(unit_containers.size()==int1);
     }
     @When("user click on quiz after video")
     public void user_click_on_quiz_after_video() {
+        Actions actions=new Actions(Driver.getDriver());
+        actions.moveToElement(loginPage.quize_feature) .click().perform();
 
     }
     @Then("user able to see Tornadoes Quiz - BrainPOP")
     public void user_able_to_see_tornadoes_quiz_brain_pop() {
+        BrowserUtils.verifyTitleContains("Tornadoes Quiz - BrainPOP");
 
     }
 

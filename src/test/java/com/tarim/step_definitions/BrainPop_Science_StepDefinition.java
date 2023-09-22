@@ -6,6 +6,7 @@ import com.tarim.pages.Science_page;
 import com.tarim.utilities.BrowserUtils;
 import com.tarim.utilities.ConfigurationReader;
 import com.tarim.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -75,18 +76,23 @@ Assert.assertTrue(unit_containers.size()==int1);
         System.out.println(Driver.getDriver().getTitle());
 
     }
-    @Then("user should able to see Tornadoes-BrainPOP as title")
-    public void user_should_able_to_see_tornadoes_brain_pop_as_title() {
 
-        System.out.println(Driver.getDriver().getTitle());
+    @And("user should able to see {string} as title")
+    public void userShouldAbleToSeeAsTitle(String arg0) {
 
+        String expectedTitle="Tornadoes-BrainPOP";
+  Assert.assertEquals(arg0,expectedTitle);
+        System.out.println(expectedTitle);
 
 
     }
+
+
+
     @Then("user should able to click on movie image icon")
     public void user_should_able_to_click_on_movie_image_icon() {
      loginPage.movie_manue.click();
-        System.out.println(Driver.getDriver().getTitle());
+
     }
     @Then("user should able to click on play button")
     public void user_should_able_to_click_on_play_button() {
@@ -104,4 +110,6 @@ Assert.assertTrue(unit_containers.size()==int1);
     public void user_able_to_see_tornadoes_quiz_brain_pop() {
 
     }
+
+
 }

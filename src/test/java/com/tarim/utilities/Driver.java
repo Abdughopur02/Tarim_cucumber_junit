@@ -68,8 +68,8 @@ public class Driver {
             /*
             We assign the value back to "null" so that my "singleton" can create a newer one if needed.
              */
-          //  driver.quit();
-           // driver=null;
+            driver.quit();
+            driver=null;
         }
     }
 
